@@ -1,0 +1,77 @@
+project-root/
+├── controllers/
+│   ├── auth.controller.js        # Handles login, register, etc.
+│   ├── dashboard.controller.js   # Handles dashboard-related operations
+│
+├── models/
+│   ├── user.model.js             # User schema
+│   ├── appPermissions.model.js   # App permissions schema
+│
+├── routes/
+│   ├── auth.routes.js            # Routes for authentication (login, register)
+│   ├── dashboard.routes.js       # Routes for dashboard (managing permissions)
+│
+├── validations/
+│   ├── user.validation.js        # Joi schema for user validation
+│   ├── dashboard.validation.js   # Joi schema for dashboard-related validation
+│
+├── middlewares/
+│   ├── auth.middleware.js        # Middleware for authentication (e.g., JWT verification)
+│   ├── error.middleware.js       # Error handling middleware
+│
+├── services/
+│   ├── jwt.service.js            # JWT utility functions
+│   ├── hash.service.js           # Password hashing/comparing
+│
+├── utils/
+│   ├── response.util.js          # Helper for consistent API responses
+│
+├── config/
+│   ├── database.js               # MongoDB connection setup
+│   ├── env.js                    # Environment variables setup
+│
+├── app.js                        # Main application file
+├── server.js                     # Entry point of the server
+├── package.json                  # Dependencies and scripts
+└── .env                          # Environment variables
+
+
+// 
+////////////////////////////
+
+
+
+
+
+
+
+project-root/
+├── routes/
+│   ├── auth.routes.js             # Login, register, logout, etc.✅
+│   ├── dashboard.routes.js        # App permissions management ✅
+│   ├── passwordChecker.routes.js  # Password strength checker ✅
+│   ├── breachCheck.routes.js      # Data breach checker ✅
+│   ├── vault.routes.js            # Password vault CRUD ✅
+│   ├── fakeData.routes.js         # Fake data generator✅
+│   ├── disposableEmail.routes.js  # Disposable email handling ✅
+│   ├── news.routes.js             # Cybersecurity news✅
+│
+├── controllers/
+│   ├── auth.controller.js         # Handles auth-related logic ✅
+│   ├── dashboard.controller.js    # Handles dashboard-related logic✅
+│   ├── passwordChecker.controller.js ✅
+│   ├── breachCheck.controller.js✅
+│   ├── vault.controller.js ✅
+│   ├── fakeData.controller.js✅
+│   ├── disposableEmail.controller.js✅
+│   ├── news.controller.js✅
+│
+├── validations/
+│   ├── user.validation.js         # Validation for auth ✅
+│   ├── dashboard.validation.js    # Validation for dashboard operations
+│   ├── passwordChecker.validation.js✅
+│   ├── breachCheck.validation.js✅
+│   ├── vault.validation.js
+│   ├── fakeData.validation.js✅
+│   ├── disposableEmail.validation.js
+│   ├── news.validation.js✅
