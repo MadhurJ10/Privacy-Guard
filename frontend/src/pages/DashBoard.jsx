@@ -12,7 +12,7 @@ const DashBoard = () => {
 
   const fetchData = async () => {
     try {
-      const response = await ApiClient.get("http://localhost:3000/get-dashboard");
+      const response = await ApiClient.get("get-dashboard");
       dispatch(setDashboardData(response.data.apps));
     } catch (err) {
       setError("Failed to load dashboard data.");
@@ -22,7 +22,7 @@ const DashBoard = () => {
   const createDashboard = async (data) => {
     console.log(data)
     try {
-      const response = await ApiClient.post("http://localhost:3000/create-dashboard", data);
+      const response = await ApiClient.post("create-dashboard", data);
       reset();
       await fetchData(); // Refresh data after creation
     } catch (error) {
@@ -32,7 +32,7 @@ const DashBoard = () => {
 
   const updateDashboardFields = async (id, fields) => {
     try {
-      await ApiClient.patch("http://localhost:3000/update-dashboard", {
+      await ApiClient.patch("update-dashboard", {
         ...fields,
         data_id: id,
       });
@@ -45,7 +45,7 @@ const DashBoard = () => {
 
   const deleteDashboard = async (id) => {
     try {
-      await ApiClient.delete("http://localhost:3000/delete-dashboard", {
+      await ApiClient.delete("delete-dashboard", {
         data: { data_id: id },
       });
       await fetchData(); // Refresh data after deletion

@@ -7,7 +7,7 @@ const News = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await ApiClient.get('/news/get-news'); // Use `.get()` if it's a GET request
+        const response = await ApiClient.get('news/get-news'); // Use `.get()` if it's a GET request
         // console.log(response.data);
         setNews(response.data.news || []); // Safely handle the absence of data
       } catch (error) {

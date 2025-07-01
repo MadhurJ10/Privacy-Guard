@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../context/UserProvider';
 import GetStartedButton from './GetStartedButton';
+import logo from '../assets/logo.png';
 
 
 
@@ -15,9 +16,12 @@ const Nav = ({ toggleSlideBar }) => {
     }
     return (
         <div className="flex justify-between w-full items-center text-black p-4 top-0 z-50 border-b">
+            <div className='flex items-center gap-2'>
+                <img src={logo} alt="" className='h-5'/>
             <Link to="/" className="font-semibold">
                 Privacy Guard
             </Link>
+            </div>
             <div className='flex flex-row gap-3'>
                 <button
                     onClick={toggleSlideBar}
