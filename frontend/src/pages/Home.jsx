@@ -3,8 +3,13 @@ import Card from '../components/Card';
 import ReviewComp from '../components/ReviewComp';
 import Footer from '../components/Footer'
 import GetStartedButton from '../components/GetStartedButton';
+import { useContext } from 'react';
+import { UserContext } from '../context/UserProvider';
+
 
 const Home = () => {
+      const {isUserValid , setIsUserValid} = useContext(UserContext);
+  
   return (
     <div className='flex flex-col items-center min-h-full font-sans mt-[2rem]'>
       {/* Header Section with Background Layer Effect */}
@@ -33,6 +38,7 @@ const Home = () => {
         <p className="hidden sm:block relative z-10 text-xl leading-loose text-center mt-4">
           Effortlessly protect your data with tools that help you manage passwords, detect breaches, generate fake info, and stay ahead with cybersecurity news.
         </p>
+        {!isUserValid && <GetStartedButton/>}
       </div>
 
       {/* Explore Our Tools Section */}

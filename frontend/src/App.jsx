@@ -7,6 +7,7 @@ import ProtectedRoutes from './pages/ProtectedRoutes';
 import { UserContext } from './context/UserProvider';
 import { fetchUserDetails } from './services/authService.js';
 import LoginProtectedRoutes from './pages/LoginProtectedRoutes.jsx';
+import Profile from './pages/Profile.jsx';
 
 
 
@@ -159,6 +160,13 @@ const App = () => {
                 <ProtectedRoutes>
                   <Vault />
                 </ProtectedRoutes>
+              }
+            />
+
+            <Route
+              path="/profile"
+              element={
+                  <Profile />
               }
             />
 

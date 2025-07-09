@@ -42,12 +42,19 @@ const SlidingBar = ({ toggleSlideBar }) => {
       className="Slidebar fixed top-0 right-0 h-full w-[18rem] bg-white z-50 flex flex-col gap-4 p-4 shadow-lg border-l border-gray-200"
     >
       {/* Close Button */}
-      <button
+      {/* <button
         onClick={handleCloseSidebar}
-        className="self-end px-2 py-3 text-gray-500 hover:text-gray-700 transition duration-200"
+        className="self-end px-2 py-3 text-gray-500 hover:text-gray-700 transition duration-200 f"
       >
         ✕
-      </button>
+      </button> */}
+
+      <div
+        onClick={handleCloseSidebar}
+        className="self-end px-2 py-3 h-[2rem] rounded-4xl bg-[#E7EDF3] cursor-pointer text-gray-500 hover:text-gray-700 transition duration-200 flex justify-center items-center"
+      >
+        ✕
+      </div>
 
       {/* Navigation Links */}
       <nav className="flex flex-col" onClick={handleCloseSidebar}>
@@ -114,7 +121,11 @@ const SlidingBar = ({ toggleSlideBar }) => {
           <i className="ri-key-line text-2xl relative top-[1px] font-bold"></i>
           <span>Data Vault</span>
         </Link>
-        {isUserValid && <button onClick={logoutUser} >logout</button>}
+        {/* {isUserValid && <button onClick={logoutUser} >logout</button>} */}
+        {isUserValid && <div onClick={logoutUser} className="px-4 py-2.5 cursor-pointer text-sm text-gray-600 hover:text-gray-900 transition duration-200 rounded-3xl hover:bg-[#E7EDF3] flex items-center gap-2">
+          <i class="ri-logout-box-line text-2xl relative top-[1px] font-bold"></i>
+          Logout
+        </div>}
       </nav>
     </div>
   );

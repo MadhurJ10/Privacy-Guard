@@ -29,7 +29,7 @@ const News = () => {
             <div key={index} className="rounded-[0.5rem] bg-[#E9EDF1] shadow-lg">
               <img
                 className="w-full shrink-0 object-cover h-64 rounded-t-[0.5rem]"
-                src={item.urlToImage || 'https://via.placeholder.com/300'}
+                src={item.image || 'https://via.placeholder.com/300'}
                 alt={item.title || 'News Image'}
               />
               <div className="flex flex-col p-3 gap-2">
