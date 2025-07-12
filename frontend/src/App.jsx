@@ -36,13 +36,13 @@ const App = () => {
       setIsLoading(true);
       try {
         const user = await fetchUserDetails();
-        console.log("Fetched User:", user);
+        // console.log("Fetched User:", user);
         if (!user) {
           setIsUserValid(false);
         } else {
           setUserDetails(user);
           setIsUserValid(true);
-          console.log(user.vaultPassword)
+          // console.log(user.vaultPassword)
           if (user.vaultPassword === null) { // This checks for both null and undefined
             setIsVault(false);
           } else {

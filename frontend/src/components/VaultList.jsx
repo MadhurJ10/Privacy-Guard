@@ -32,12 +32,12 @@ const VaultList = () => {
 
     const handleDelete = async (index) => {
         try {
-            console.log( vaultEntries[index]._id)
+            // console.log( vaultEntries[index]._id)
             // Make API call to delete the entry
             const response = await ApiClient.delete(`/vault/vault-delete/`, {
                 data: { data_id: vaultEntries[index]._id }
             });
-            console.log(response)
+            // console.log(response)
             const updatedEntries = vaultEntries.filter((_, i) => i !== index);
             dispatch(setVaultData(updatedEntries));
         } catch (err) {

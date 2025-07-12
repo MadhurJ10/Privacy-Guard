@@ -12,7 +12,7 @@ const DataBreach = () => {
             const response = await ApiClient.post('/check/breach-check', {
                 email: data.email,
             });
-            console.log(response.data);
+            // console.log(response.data);
             if (response.data.msg === 'no breach found all acount is clear') {
                 setMessage(response.data.msg);
                 setBreaches([]);

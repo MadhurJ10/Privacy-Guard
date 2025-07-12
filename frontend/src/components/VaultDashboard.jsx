@@ -11,7 +11,7 @@ const VaultDashboard = () => {
 
     const onSubmit = async (data) => {
         try {
-            console.log("Form Data:", data);
+            // console.log("Form Data:", data);
             const response = await ApiClient.post('/vault/create-vaultData', {
                 appName: data.appName,
                 username: "madhur", // Replace with dynamic user data if available
@@ -19,7 +19,7 @@ const VaultDashboard = () => {
                 url: "dummy-url" // Replace with actual URL if needed
             });
 
-            console.log("API Response:", response.data.newEntry);
+            // console.log("API Response:", response.data.newEntry);
 
             // Append the new entry to Redux instead of replacing all
             dispatch(addVaultEntry(response.data.newEntry));

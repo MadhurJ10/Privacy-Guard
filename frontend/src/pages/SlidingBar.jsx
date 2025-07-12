@@ -122,7 +122,7 @@ const SlidingBar = ({ toggleSlideBar }) => {
           <span>Data Vault</span>
         </Link>
         {/* {isUserValid && <button onClick={logoutUser} >logout</button>} */}
-        {isUserValid && <div onClick={logoutUser} className="px-4 py-2.5 cursor-pointer text-sm text-gray-600 hover:text-gray-900 transition duration-200 rounded-3xl hover:bg-[#E7EDF3] flex items-center gap-2">
+        {isUserValid && <div onClick={logoutUser} className="log px-4 py-2.5 cursor-pointer text-sm text-gray-600 hover:text-gray-900 transition duration-200 rounded-3xl hover:bg-[#E7EDF3] flex items-center gap-2">
           <i class="ri-logout-box-line text-2xl relative top-[1px] font-bold"></i>
           Logout
         </div>}

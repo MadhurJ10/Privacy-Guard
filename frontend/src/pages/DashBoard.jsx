@@ -20,7 +20,7 @@ const DashBoard = () => {
   };
 
   const createDashboard = async (data) => {
-    console.log(data)
+    // console.log(data)
     try {
       const response = await ApiClient.post("create-dashboard", data);
       reset();

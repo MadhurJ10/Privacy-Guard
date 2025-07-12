@@ -28,7 +28,7 @@ const DisposableEmail = () => {
             const response = await ApiClient.post('/email/get-disposableEmailInbox', {
                 inboxToken: inboxToken,
             });
-            console.log(response.data.inbox)
+            // console.log(response.data.inbox)
             setInbox(response.data.inbox || []); // Assuming API returns an "emails" array
         } catch (err) {
             setError('Failed to fetch inbox. Please try again.');
