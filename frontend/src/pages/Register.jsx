@@ -31,7 +31,7 @@ const Register = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
+        <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4 flex-col">
             <form
                 onSubmit={handleSubmit(submitted)}
                 className="bg-white w-full max-w-md p-8 rounded-xl shadow-md border border-gray-300"
@@ -123,6 +123,11 @@ const Register = () => {
                 </p>
 
             </form>
+            <div className="text-black rounded-xl shadow-md px-8 py-4 space-y-2">
+                <h1 className="text-xl font-semibold">🧪 For Demo Try:</h1>
+                <p><span className="font-medium">Email:</span> test3@gmail.com</p>
+                <p><span className="font-medium">Password:</span> test3@2005</p>
+            </div>
         </div>
     );
 };
