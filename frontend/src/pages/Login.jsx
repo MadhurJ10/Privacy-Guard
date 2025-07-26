@@ -29,7 +29,7 @@ const Login = () => {
   };
 
   return (
-    <div className='h-screen flex items-center justify-center px-[1rem] bg-gray-100'>
+    <div className='h-screen flex items-center justify-center px-[1rem] bg-gray-100 flex-col'>
       <form
         className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md border-2 border-gray-300"
         onSubmit={handleSubmit(submitted)}
@@ -104,6 +104,11 @@ const Login = () => {
           </button>
         </p>
       </form>
+     <div className="text-black rounded-xl shadow-md px-8 py-4 space-y-2">
+  <h1 className="text-xl font-semibold">🧪 For Demo Try:</h1>
+  <p><span className="font-medium">Email:</span> test3@gmail.com</p>
+  <p><span className="font-medium">Password:</span> test3@2005</p>
+</div>
     </div>
   );
 };
